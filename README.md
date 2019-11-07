@@ -6,4 +6,4 @@ yarn start
 ```
 
 ## Step 2
-Navigate to https://localhost:8989
+Navigate to http://localhost:8989
