@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+<head>
+  <meta charset="utf-8"/>
+  <title>The Axe Core Playground - New Rule Definitions</title>
+  <meta name="description" content="Playground for exploring Axe Core extensions"/>
+  <meta name="author" content="Andrew A. Lee"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="overrides.html">Rule Overrides</a></li>
+        <li><a href="augmentation.html">Rule Augmentation</a></li>
+        <li><a href="definitions.html">New Rule Definitions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>The Axe Core Playground</h1>
+    <h2>New Rule Definitions</h2>
+
+    <p>Defines a rule and check that flags links with duplicate title attribute text.</p>
+
+    <ul class="links">
+      <li>
+        <a id="link_1" href="https://www.linkedin.com/in/jeffweiner08/" title="Jeff Weiner's LinkedIn profile">Jeff Weiner's LinkedIn profile</a>
+        <span>[Fail]</span>
+      </li>
+
+      <li>
+        <a id="link_2" class="no-text-link" href="https://www.linkedin.com/in/jeffweiner08/" title="Jeff Weiner's LinkedIn profile" aria-label="Jeff Weiner's LinkedIn profile"></a>
+        <span>[Pass]</span>
+      </li>
+
+      <li>
+        <span id="link_3_label" class="visually-hidden">Jeff Weiner's LinkedIn profile</span>
+        <a id="link_3" class="no-text-link" href="https://www.linkedin.com/in/jeffweiner08/" title="Jeff Weiner's LinkedIn profile" aria-labelledby="link_3_label"></a>
+        <span>[Pass]</span>
+      </li>
+
+      <li>
+        <a id="link_4" href="https://www.linkedin.com/in/jeffweiner08/" title="Jeff Weiner's LinkedIn profile">
+          <img src="img/jeff.jpg" width="40" alt="Jeff Weiner's LinkedIn profile"/>
+        </a>
+        <span>[Fail]</span>
+      </li>
+
+      <li>
+        <a id="link_5" href="https://www.linkedin.com/in/jeffweiner08/" title="Jeff Weiner's LinkedIn profile" aria-label="Jeff Weiner's LinkedIn profile">Jeff Weiner's LinkedIn profile</a>
+        <span>[Pass]</span>
+      </li>
+
+      <li>
+        <span id="link_6_label" class="visually-hidden">Jeff Weiner's LinkedIn profile</span>
+        <a id="link_6" href="https://www.linkedin.com/in/jeffweiner08/" title="Jeff Weiner's LinkedIn profile" aria-labelledby="link_6_label">Jeff Weiner's LinkedIn profile</a>
+        <span>[Pass]</span>
+      </li>
+    </ul>
+  </main>
+
+  <script src="js/axe.min.js"></script>
+  <script src="js/definitions.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

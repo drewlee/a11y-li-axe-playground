@@ -1,0 +1,41 @@
+html {
+  font: 100% Helvetica, Arial, sans-serif;
+}
+
+figure, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: inline-block;
+}
+
+.container img,
+.container svg {
+  border: 1px solid black;
+}
+
+.container svg {
+  padding: 10px;
+}
+
+.links li {
+  margin: 10px 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.no-text-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+}

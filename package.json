@@ -1,0 +1,16 @@
+{
+  "name": "a11y-li-axe-playground",
+  "version": "1.0.0",
+  "description": "Playground for exploring Axe Core extensions",
+  "main": "index.js",
+  "author": "Andrew A Lee",
+  "license": "BSD-2-Clause",
+  "private": false,
+  "scripts": {
+    "start": "cp node_modules/axe-core/axe.min.js public/js/ && node index.js"
+  },
+  "devDependencies": {
+    "axe-core": "3.3.2",
+    "live-server": "^1.2.1"
+  }
+}
