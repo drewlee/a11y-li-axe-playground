@@ -4,6 +4,10 @@
   "description": "Playground for exploring Axe Core extensions",
   "main": "index.js",
   "author": "Andrew A Lee",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drewlee/a11y-li-axe-playground.git"
+	},
   "license": "BSD-2-Clause",
   "private": false,
   "scripts": {
