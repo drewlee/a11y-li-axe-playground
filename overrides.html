@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+<head>
+  <meta charset="utf-8"/>
+  <title>The Axe Core Playground - Rule Overrides</title>
+  <meta name="description" content="Playground for exploring Axe Core extensions"/>
+  <meta name="author" content="Andrew A. Lee"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="overrides.html">Rule Overrides</a></li>
+        <li><a href="augmentation.html">Rule Augmentation</a></li>
+        <li><a href="definitions.html">New Rule Definitions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>The Axe Core Playground</h1>
+    <h2>Rule Overrides</h2>
+
+    <p>Although the image below has no assigned <code>alt</code> attribute, it does not get flagged as a violation
+    because it has a <code>title</code> value set. Since this a poor development practice, we override the <strong>image-alt</strong>
+    rule by removing its <strong>non-empty-title</strong> check, thus resulting in a violation which can be observed in the developer
+    console.
+    </p>
+
+    <figure class="container">
+      <img src="img/cat_01.png" title="Gray kitten"/>
+      <figcaption>Image with no alternate text</figcaption>
+    </figure>
+  </main>
+
+  <script src="js/axe.min.js"></script>
+  <script src="js/overrides.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

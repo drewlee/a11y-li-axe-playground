@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+<head>
+  <meta charset="utf-8"/>
+  <title>The Axe Core Playground - Rule Augmentation</title>
+  <meta name="description" content="Playground for exploring Axe Core extensions"/>
+  <meta name="author" content="Andrew A. Lee"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="overrides.html">Rule Overrides</a></li>
+        <li><a href="augmentation.html">Rule Augmentation</a></li>
+        <li><a href="definitions.html">New Rule Definitions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>The Axe Core Playground</h1>
+    <h2>Rule Augmentation</h2>
+
+    <p>Currently, the <strong>role-img-alt</strong> rule doesn't check SVG elements that are assigned an <code>img</code> ARIA role.
+      We can augment the existing rule so that this scenario is flagged as a violation, as observed in the developer console.
+    </p>
+
+    <figure class="container">
+      <svg xmlns="http://www.w3.org/2000/svg" id="star_graphic_1" width="255" height="240" viewBox="0 0 51 48" role="img">
+        <title>Five Pointed Star</title>
+        <path fill="none" stroke="#000" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
+      </svg>
+      <figcaption>SVG image graphic (failing)</figcaption>
+    </figure>
+
+    <figure class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" id="star_graphic_2" width="255" height="240" viewBox="0 0 51 48" role="img" aria-label="Five Pointed Star">
+          <title>Five Pointed Star</title>
+          <path fill="none" stroke="#000" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
+        </svg>
+        <figcaption>SVG image graphic (passing)</figcaption>
+      </figure>
+  </main>
+
+  <script src="js/axe.min.js"></script>
+  <script src="js/augmentation.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
